@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bgd2mer30cim4"]
+[gd_scene load_steps=16 format=4 uid="uid://bgd2mer30cim4"]
 
 [ext_resource type="Texture2D" uid="uid://thw5ttmlqd4p" path="res://assets/arriere_plans/background_montagne.png" id="2_r4l43"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="2_rdxbm"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hi7t64ijaxck" path="res://scenes/monnaie.tscn" id="10_3hkp0"]
 [ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scenes/menu_controle.tscn" id="11_htidv"]
 [ext_resource type="PackedScene" uid="uid://w6tman5bqiei" path="res://scenes/killzone.tscn" id="12_r4l43"]
+[ext_resource type="PackedScene" uid="uid://ccox6m3u0rcsd" path="res://scenes/feu_camp.tscn" id="13_lsaug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
@@ -47,12 +48,21 @@ tile_map_data = PackedByteArray("AAD9/w0AAAAGAA8AAAD+/wwAAAAIAAEAAAADAAwAAAAIAAE
 tile_set = ExtResource("5_5ti7h")
 
 [node name="DecorTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAkAAAAOABEAAAAIAAkAAAAOABEAAAAIAA0AAAAAAAMAAAAJAA0AAAAAAAMAAAAKAA0AAAAAAAMAAAALAA0AAAAAAAMAAAAMAA0AAAAAAAMAAAANAA0AAAAAAAMAAAAOAA0AAAAAAAMAAAAPAA0AAAAAAAMAAAAQAA0AAAAAAAMAAAARAA0AAAAAAAMAAAASAA0AAAAAAAMAAAAWAAkAAAAPAAQAAGAWAAcAAAAPAAQAAGAWAAUAAAAPAAQAAGAWAAMAAAAPAAQAAGASAAUAAAAPAAQAAGASAAMAAAAPAAQAAGAQAAIAAAAPAAwAAAATAAkAAAAOABEAAAASAAkAAAAOABEAAAACAAQAAAAPAA0AAAAEAAQAAAAPAA0AAAAAAAMAAAAOAAsAAAAAAAoAAAAPAAEAAAAAAAkAAAAPAAAAAAADAAQAAAAAAAYAAAAKAAMAAAAKAAsAAAD//woAAAAKABEAAAD9/wMAAAAOAAAAAAD//wMAAAAOAAAAAAAEAAoAAAAAAAYAAAAWAAIAAAAAAAYAAAA=")
+tile_map_data = PackedByteArray("AAAHAAkAAAAOABEAAAAIAAkAAAAOABEAAAAIAA0AAAAAAAMAAAAJAA0AAAAAAAMAAAAKAA0AAAAAAAMAAAALAA0AAAAAAAMAAAAMAA0AAAAAAAMAAAANAA0AAAAAAAMAAAAOAA0AAAAAAAMAAAAPAA0AAAAAAAMAAAAQAA0AAAAAAAMAAAARAA0AAAAAAAMAAAASAA0AAAAAAAMAAAAWAAkAAAAPAAQAAGAWAAcAAAAPAAQAAGAWAAUAAAAPAAQAAGAWAAMAAAAPAAQAAGASAAUAAAAPAAQAAGASAAMAAAAPAAQAAGAQAAIAAAAPAAwAAAATAAkAAAAOABEAAAASAAkAAAAOABEAAAACAAQAAAAPAA0AAAAEAAQAAAAPAA0AAAAAAAMAAAAOAAsAAAAAAAoAAAAPAAEAAAAAAAkAAAAPAAAAAAAKAAMAAAAKAAsAAAD//woAAAAKABEAAAD9/wMAAAAOAAAAAAD//wMAAAAOAAAAAAA=")
 tile_set = ExtResource("5_5ti7h")
 
 [node name="PanneauMessage" parent="." groups=["panneaux"] instance=ExtResource("6_x3gr2")]
 position = Vector2(352, 704)
 message = "Bienvenue au niveau plus facile !"
+
+[node name="FeuCamp" parent="." instance=ExtResource("13_lsaug")]
+position = Vector2(288, 673)
+
+[node name="FeuCamp2" parent="." instance=ExtResource("13_lsaug")]
+position = Vector2(1440, 160)
+
+[node name="FeuCamp3" parent="." instance=ExtResource("13_lsaug")]
+position = Vector2(224, 288)
 
 [node name="Joueur" parent="." instance=ExtResource("7_6868w")]
 position = Vector2(32, 704)

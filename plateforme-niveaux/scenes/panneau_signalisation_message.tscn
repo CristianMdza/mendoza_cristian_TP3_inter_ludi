@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://vc4cyttj8282"]
+
+[ext_resource type="Texture2D" uid="uid://iqnmflnpmfh8" path="res://assets/sprites/sign_left.png" id="2_c5s2d"]
+
+[sub_resource type="GDScript" id="GDScript_t7vls"]
+script/source = "## Montre un message quand le joueur est proche.
+class_name PanneauSignalisationMessage extends Area2D
+
+@export var message := \"Un message défaut.\"
+
+
+func _ready() -> void:
+	$Message.hide()
+
+
+func show_message(_body):
+	$Timer.start()
+	$Message.show()
+	$Message/Fond/Etiquette.text = message
+	await $Timer.timeout
+	$Message.hide()
+
+
+func hide_message(_body) -> void:
+	$Timer.stop()
+	$Message.hide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efcy8"]
+size = Vector2(48, 32)
+
+[node name="PanneauSignalisationMessage" type="Area2D"]
+script = SubResource("GDScript_t7vls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_efcy8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -32)
+texture = ExtResource("2_c5s2d")
+
+[node name="Message" type="Node2D" parent="."]
+visible = false
+
+[node name="Fond" type="ColorRect" parent="Message"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -232.0
+offset_right = 232.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.101961, 0.101961, 0.788235)
+metadata/_edit_group_ = true
+
+[node name="Etiquette" type="Label" parent="Message/Fond"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="body_exited" from="." to="." method="hide_message"]
