@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://b2686s3s4sfad"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_e52v2"]
-[ext_resource type="Texture2D" uid="uid://bayntyuvnohmg" path="res://assets/gradient_jaune_mauve.tres" id="1_sbilw"]
+[ext_resource type="Texture2D" uid="uid://3q0m2rfpv80a" path="res://assets/arriere_plans/background_neige_1.png" id="2_w326i"]
 [ext_resource type="PackedScene" uid="uid://dy0v8872jlfyb" path="res://scenes/niveau_02_cle_porte.tscn" id="4_rm66m"]
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="8_aujc2"]
 [ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="8_pcvo2"]
@@ -22,9 +22,9 @@ size = Vector2(25, 53)
 [node name="HUD" parent="." instance=ExtResource("1_e52v2")]
 
 [node name="ArrierePlan" type="Sprite2D" parent="."]
-position = Vector2(801, 448)
-scale = Vector2(29.0312, 14)
-texture = ExtResource("1_sbilw")
+position = Vector2(948, 1679)
+scale = Vector2(32.4614, 27.1333)
+texture = ExtResource("2_w326i")
 
 [node name="PorteNiveau" type="Area2D" parent="."]
 position = Vector2(1465, 216)
