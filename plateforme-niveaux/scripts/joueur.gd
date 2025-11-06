@@ -14,7 +14,6 @@ enum Etat {
 	GLISSE_MUR
 }
 
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -61,10 +60,15 @@ func _physics_process(delta: float) -> void:
 
 
 func die():
+	# Désactive les contrôles du joueur.
 	set_physics_process(false)
 	
+	# Joue une animation de mort si le joueur en as une.
 	if has_node("AnimatedSprite2D"):
 		$AnimatedSprite2D.play("mort")
-
+	
+	# Petit délai avant de redémarrer le niveau.
 	await get_tree().create_timer(1.0).timeout
+	
+	# Recharge la scène actuelle (fait "réapparaître" le joueur).
 	get_tree().reload_current_scene()

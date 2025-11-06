@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5j6ggrxmb6vs"]
+
+[ext_resource type="Script" uid="uid://cvbdxc6vaccck" path="res://scripts/ascenseur_01.gd" id="1_ps05l"]
+[ext_resource type="Texture2D" uid="uid://bpofxowku22t3" path="res://assets/sprites/terrain_purple_horizontal_overhang_left.png" id="2_kkmfo"]
+[ext_resource type="Texture2D" uid="uid://b6qyx8nut121j" path="res://assets/sprites/terrain_purple_horizontal_overhang_right.png" id="3_4d3oi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge4ol"]
+size = Vector2(112, 38)
+
+[node name="Ascenseur01" type="AnimatableBody2D"]
+script = ExtResource("1_ps05l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-32, 0)
+texture = ExtResource("2_kkmfo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("3_4d3oi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_ge4ol")

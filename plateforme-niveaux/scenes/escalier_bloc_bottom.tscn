@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6qrcorhtx35m"]
+
+[ext_resource type="Texture2D" uid="uid://bv421jj5pfrih" path="res://assets/sprites/ladder_middle.png" id="1_3wpso"]
+
+[sub_resource type="GDScript" id="GDScript_3wpso"]
+script/source = "# escalier_bloc.gd  -> attache à l'Area2D de chaque bloc
+extends Area2D
+
+# Référence au joueur quand il entre dans la zone
+var joueur_dans_zone = null
+
+func _ready():
+	connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+	connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
+
+func _on_body_entered(body):
+	# On vérifie le groupe \"joueur\"
+	if body.is_in_group(\"joueur\"):
+		joueur_dans_zone = body
+		# Appelle la fonction du joueur pour indiquer qu'il est sur un escalier
+		if body.has_method(\"entrer_escalier\"):
+			body.entrer_escalier()
+
+func _on_body_exited(body):
+	if body.is_in_group(\"joueur\"):
+		# Si le joueur quitte ce bloc, on avertit le joueur.
+		joueur_dans_zone = null
+		if body.has_method(\"sortir_escalier\"):
+			body.sortir_escalier()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wpso"]
+size = Vector2(56, 64)
+
+[node name="EscalierBlocBottom" type="Area2D"]
+script = SubResource("GDScript_3wpso")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3wpso")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3wpso")
