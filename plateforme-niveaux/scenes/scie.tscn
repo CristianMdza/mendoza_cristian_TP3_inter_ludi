@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://k22mgw6t6lq5"]
+
+[ext_resource type="Script" uid="uid://c4jkwtne4rrfc" path="res://scripts/scie.gd" id="1_2dred"]
+[ext_resource type="Texture2D" uid="uid://boxb23skrfkv6" path="res://assets/sprites/saw.png" id="2_tnggl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_udgsw"]
+radius = 27.0185
+
+[node name="Scie" type="Area2D"]
+script = ExtResource("1_2dred")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tnggl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_udgsw")

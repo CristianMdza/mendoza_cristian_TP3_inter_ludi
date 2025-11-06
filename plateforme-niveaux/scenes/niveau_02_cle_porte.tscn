@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=20 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://3q0m2rfpv80a" path="res://assets/arriere_plans/background_neige_1.png" id="2_ao7hb"]
@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://dytpja2qcbap4" path="res://scenes/cle.tscn" id="12_ao7hb"]
 [ext_resource type="PackedScene" uid="uid://bomh7koi041an" path="res://scenes/obstacle_verrouille.tscn" id="12_mmh6l"]
 [ext_resource type="PackedScene" uid="uid://w6tman5bqiei" path="res://scenes/killzone.tscn" id="13_ao7hb"]
+[ext_resource type="PackedScene" uid="uid://k22mgw6t6lq5" path="res://scenes/scie.tscn" id="14_8sywa"]
 [ext_resource type="PackedScene" uid="uid://bxrgeepjetk2q" path="res://scenes/piege_apointes.tscn" id="14_tionb"]
+[ext_resource type="PackedScene" uid="uid://b80hgv1wbiec6" path="res://scenes/scie__sens_inverse.tscn" id="15_kqnfo"]
 [ext_resource type="PackedScene" uid="uid://j5reeistl6nc" path="res://scenes/bloc_a_pointes.tscn" id="15_vkl7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
@@ -50,7 +52,7 @@ tile_map_data = PackedByteArray("AAD+/wgAAAAGAAQAAAD+/wkAAAAGAAcAAAD+/woAAAAGAAo
 tile_set = ExtResource("6_xnlme")
 
 [node name="DecorTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAALAAkAAAAKAAoAAAAGAAsAAAAAAAMAAAAHAAsAAAAAAAMAAAAIAAsAAAAAAAMAAAAGAAwAAAAAAAUAAAAGAA0AAAAAAAUAAAAHAAwAAAAAAAUAAAAHAA0AAAAAAAUAAAAIAAwAAAAAAAUAAAAIAA0AAAAAAAUAAAAHAAoAAAAPAA4AACD7/wQAAAAPAAAAAAD7/wUAAAAPAAEAAAARAA0AAAAAAAUAAAAPAAwAAAAAAAMAAAAQAAwAAAAAAAMAAAARAAwAAAAAAAMAAAAPAA0AAAAAAAUAAAAQAA0AAAAAAAUAAAD2/wUAAAAOABEAAAD3/wUAAAAOABEAAAD4/wUAAAAOABEAAAD5/wUAAAAOABEAAAD9/wUAAAAOABEAAAD+/wUAAAAOABEAAAD//wUAAAAOABEAAAAYAAMAAAAPAAsAAAAYAAQAAAAPAAsAAAASAAMAAAAPAAsAAAA=")
+tile_map_data = PackedByteArray("AAALAAkAAAAKAAoAAAAGAAsAAAAAAAMAAAAHAAsAAAAAAAMAAAAIAAsAAAAAAAMAAAAGAAwAAAAAAAUAAAAGAA0AAAAAAAUAAAAHAAwAAAAAAAUAAAAHAA0AAAAAAAUAAAAIAAwAAAAAAAUAAAAIAA0AAAAAAAUAAAAHAAoAAAAPAA4AACD7/wQAAAAPAAAAAAD7/wUAAAAPAAEAAAARAA0AAAAAAAUAAAAPAAwAAAAAAAMAAAAQAAwAAAAAAAMAAAARAAwAAAAAAAMAAAAPAA0AAAAAAAUAAAAQAA0AAAAAAAUAAAD2/wUAAAAOABEAAAD3/wUAAAAOABEAAAD4/wUAAAAOABEAAAD5/wUAAAAOABEAAAD9/wUAAAAOABEAAAD+/wUAAAAOABEAAAD//wUAAAAOABEAAAAYAAMAAAAPAAsAAAAYAAQAAAAPAAsAAAATAAMAAAAPAAsAAAA=")
 tile_set = ExtResource("6_xnlme")
 
 [node name="obstacles" type="Node2D" parent="."]
@@ -106,6 +108,15 @@ position = Vector2(-456, 874)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_tionb")
+
+[node name="Scie" parent="." instance=ExtResource("14_8sywa")]
+position = Vector2(672, 480)
+
+[node name="Scie2" parent="." instance=ExtResource("14_8sywa")]
+position = Vector2(1184, 480)
+
+[node name="ScieSensInverse" parent="." instance=ExtResource("15_kqnfo")]
+position = Vector2(800, 480)
 
 [node name="PiegeApointes" parent="." instance=ExtResource("14_tionb")]
 position = Vector2(287, 609)
