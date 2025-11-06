@@ -56,6 +56,9 @@ tile_set = ExtResource("6_xnlme")
 tile_map_data = PackedByteArray("AAALAAkAAAAKAAoAAAAGAAsAAAAAAAMAAAAHAAsAAAAAAAMAAAAIAAsAAAAAAAMAAAAGAAwAAAAAAAUAAAAGAA0AAAAAAAUAAAAHAAwAAAAAAAUAAAAHAA0AAAAAAAUAAAAIAAwAAAAAAAUAAAAIAA0AAAAAAAUAAAAHAAoAAAAPAA4AACD7/wQAAAAPAAAAAAD7/wUAAAAPAAEAAAARAA0AAAAAAAUAAAAPAAwAAAAAAAMAAAAQAAwAAAAAAAMAAAARAAwAAAAAAAMAAAAPAA0AAAAAAAUAAAAQAA0AAAAAAAUAAAD2/wUAAAAOABEAAAD3/wUAAAAOABEAAAD4/wUAAAAOABEAAAD5/wUAAAAOABEAAAD9/wUAAAAOABEAAAD+/wUAAAAOABEAAAD//wUAAAAOABEAAAAYAAMAAAAPAAsAAAAYAAQAAAAPAAsAAAATAAMAAAAPAAsAAAAQAAoAAAAPAA4AACA=")
 tile_set = ExtResource("6_xnlme")
 
+[node name="Ascenseur01" parent="." instance=ExtResource("18_gwy8y")]
+position = Vector2(960, 544)
+
 [node name="obstacles" type="Node2D" parent="."]
 
 [node name="Obstacle" parent="obstacles" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
@@ -73,18 +76,15 @@ position = Vector2(1505, 544)
 [node name="Obstacle7" parent="obstacles" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
 position = Vector2(1505, 608)
 
-[node name="Ascenseur01" parent="." instance=ExtResource("18_gwy8y")]
-position = Vector2(960, 544)
+[node name="monnaies" type="Node2D" parent="."]
 
-[node name="monnaie" type="Node2D" parent="."]
-
-[node name="Monnaie" parent="monnaie" instance=ExtResource("10_8vkqi")]
+[node name="Monnaie" parent="monnaies" instance=ExtResource("10_8vkqi")]
 position = Vector2(225, 96)
 
-[node name="Monnaie2" parent="monnaie" instance=ExtResource("10_8vkqi")]
+[node name="Monnaie2" parent="monnaies" instance=ExtResource("10_8vkqi")]
 position = Vector2(481, 96)
 
-[node name="Monnaie3" parent="monnaie" instance=ExtResource("10_8vkqi")]
+[node name="Monnaie3" parent="monnaies" instance=ExtResource("10_8vkqi")]
 position = Vector2(737, 289)
 
 [node name="Joueur" parent="." instance=ExtResource("8_oeuwp")]
@@ -113,28 +113,34 @@ position = Vector2(-456, 874)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_tionb")
 
-[node name="Scie" parent="." instance=ExtResource("14_8sywa")]
+[node name="Scies" type="Node2D" parent="."]
+
+[node name="Scie" parent="Scies" instance=ExtResource("14_8sywa")]
 position = Vector2(672, 480)
 
-[node name="Scie2" parent="." instance=ExtResource("14_8sywa")]
+[node name="Scie2" parent="Scies" instance=ExtResource("14_8sywa")]
 position = Vector2(1184, 480)
 
-[node name="ScieSensInverse" parent="." instance=ExtResource("15_kqnfo")]
+[node name="ScieSensInverse" parent="Scies" instance=ExtResource("15_kqnfo")]
 position = Vector2(800, 480)
 
-[node name="PiegeApointes" parent="." instance=ExtResource("14_tionb")]
+[node name="PiegesAPointes" type="Node2D" parent="."]
+
+[node name="PiegeApointes" parent="PiegesAPointes" instance=ExtResource("14_tionb")]
 position = Vector2(287, 609)
 
-[node name="PiegeApointes2" parent="." instance=ExtResource("14_tionb")]
+[node name="PiegeApointes2" parent="PiegesAPointes" instance=ExtResource("14_tionb")]
 position = Vector2(352, 673)
 
-[node name="PiegeApointes3" parent="." instance=ExtResource("14_tionb")]
+[node name="PiegeApointes3" parent="PiegesAPointes" instance=ExtResource("14_tionb")]
 position = Vector2(608, 673)
 
-[node name="BlocAPointes" parent="." instance=ExtResource("15_vkl7c")]
+[node name="BlocsAPointes" type="Node2D" parent="."]
+
+[node name="BlocAPointes" parent="BlocsAPointes" instance=ExtResource("15_vkl7c")]
 position = Vector2(928, 736)
 
-[node name="BlocAPointes2" parent="." instance=ExtResource("15_vkl7c")]
+[node name="BlocAPointes2" parent="BlocsAPointes" instance=ExtResource("15_vkl7c")]
 position = Vector2(1184, 736)
 
 [connection signal="body_entered" from="PorteNiveau" to="PorteNiveau" method="_on_body_entered"]
