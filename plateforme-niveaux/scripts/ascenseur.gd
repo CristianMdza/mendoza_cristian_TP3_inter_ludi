@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
-@export var range_y = 0
-@export var duration = 5
+@export var range_y: float = 275.0
+@export var duration: float = 5.0
 
 var position_base_y
 var tween

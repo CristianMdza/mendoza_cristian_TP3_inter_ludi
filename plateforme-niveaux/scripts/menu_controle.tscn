@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://j05okgtuaimk"]
 
-[ext_resource type="Script" uid="uid://be02vcw1pg0va" path="res://scripts/menu_controle.gd" id="1_5qrj1"]
-[ext_resource type="Texture2D" uid="uid://crhkoo4vld02q" path="res://assets/spritesheets/close_icon.tres" id="2_5qrj1"]
+[ext_resource type="Script" uid="uid://be02vcw1pg0va" path="res://scripts/menu_controle.gd" id="1_rnicl"]
+[ext_resource type="Texture2D" uid="uid://crhkoo4vld02q" path="res://assets/spritesheets/close_icon.tres" id="2_ogb0s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cixlm"]
 bg_color = Color(0.498039, 0.498039, 0.498039, 0.682353)
@@ -36,7 +36,7 @@ region = Rect2(350, 350, 50, 50)
 
 [node name="MenuControle" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_5qrj1")
+script = ExtResource("1_rnicl")
 metadata/_edit_vertical_guides_ = [512.0]
 
 [node name="PauseMenu" type="Panel" parent="."]
@@ -106,7 +106,7 @@ offset_top = 17.0
 offset_right = -22.0
 offset_bottom = 75.0
 grow_horizontal = 0
-icon = ExtResource("2_5qrj1")
+icon = ExtResource("2_ogb0s")
 
 [node name="InstructionsLabel" type="Label" parent="PauseMenu/InstructionsScreen"]
 layout_mode = 1

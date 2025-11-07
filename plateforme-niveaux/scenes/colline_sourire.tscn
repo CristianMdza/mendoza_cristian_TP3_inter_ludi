@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://bo2wh1bw38s54"]
+
+[ext_resource type="Script" uid="uid://brgu4fnnfruxq" path="res://scripts/colline_sourire.gd" id="1_e4xl2"]
+[ext_resource type="Texture2D" uid="uid://uwvnbciwyoc7" path="res://assets/sprites/hill_top.png" id="2_x31rd"]
+[ext_resource type="Texture2D" uid="uid://7srq3uahj8qq" path="res://assets/sprites/hill_top_smile.png" id="3_8ojec"]
+[ext_resource type="AudioStream" uid="uid://c7gwbul2rel4f" path="res://assets/sounds/Wood Burning in Fireplace 4 - QuickSounds.com.mp3" id="4_ei8qi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nob6l"]
+atlas = ExtResource("2_x31rd")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei8qi"]
+atlas = ExtResource("3_8ojec")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nys6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nob6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei8qi")
+}],
+"loop": true,
+"name": &"face_sourire_colline",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hxwh"]
+radius = 20.0
+height = 62.0
+
+[node name="CollineSourire" type="Area2D"]
+script = ExtResource("1_e4xl2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3nys6")
+animation = &"face_sourire_colline"
+frame_progress = 0.0174698
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ei8qi")
+autoplay = true
+max_distance = 200.0
+attenuation = 1.5
+parameters/looping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5hxwh")

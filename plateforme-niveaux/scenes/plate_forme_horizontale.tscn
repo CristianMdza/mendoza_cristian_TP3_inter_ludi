@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlynv50j15psb"]
+
+[ext_resource type="Script" uid="uid://d1glys8ka58m7" path="res://scripts/plate_forme_horizontale.gd" id="1_8bsrp"]
+[ext_resource type="Texture2D" uid="uid://ccy11aji2lah5" path="res://assets/sprites/terrain_sand_cloud_left.png" id="2_t5sp3"]
+[ext_resource type="Texture2D" uid="uid://4jju3klv5cah" path="res://assets/sprites/terrain_sand_cloud_middle.png" id="3_tpqnc"]
+[ext_resource type="Texture2D" uid="uid://bp4eq62q3d1ue" path="res://assets/sprites/terrain_sand_cloud_right.png" id="4_2atxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge4ol"]
+size = Vector2(176, 42)
+
+[node name="PlateFormeHorizontale" type="AnimatableBody2D"]
+script = ExtResource("1_8bsrp")
+
+[node name="BlocGauche" type="Sprite2D" parent="."]
+position = Vector2(-32, 0)
+texture = ExtResource("2_t5sp3")
+
+[node name="BlocCentre" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("3_tpqnc")
+
+[node name="BlocDroite" type="Sprite2D" parent="."]
+position = Vector2(96, 0)
+texture = ExtResource("4_2atxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, -11)
+shape = SubResource("RectangleShape2D_ge4ol")
