@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="8_ydwbf"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="9_m40i3"]
 [ext_resource type="PackedScene" uid="uid://hi7t64ijaxck" path="res://scenes/monnaie.tscn" id="10_8vkqi"]
-[ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scripts/menu_controle.tscn" id="11_rvs65"]
+[ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scenes/menu_controle.tscn" id="11_rvs65"]
 [ext_resource type="PackedScene" uid="uid://dytpja2qcbap4" path="res://scenes/cle.tscn" id="12_ao7hb"]
 [ext_resource type="PackedScene" uid="uid://77ax8o5svi1b" path="res://scenes/escalier_bloc_top.tscn" id="12_b0jx8"]
 [ext_resource type="PackedScene" uid="uid://bomh7koi041an" path="res://scenes/obstacle_verrouille.tscn" id="12_mmh6l"]

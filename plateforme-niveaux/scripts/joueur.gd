@@ -1,14 +1,14 @@
 class_name Joueur
 extends CharacterBody2D
 
-# --- CONSTANTES DE DÉPLACEMENT ---
+# CONSTANTES DE DÉPLACEMENT 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const glisser_mur_mod = 0.15
 
 @export var etat_courant = Etat.REPOS
 
-# --- ÉTATS DU JOUEUR ---
+# ÉTATS DU JOUEUR
 enum Etat {
 	REPOS,
 	PROMENER,
@@ -16,7 +16,8 @@ enum Etat {
 	GLISSE_MUR
 }
 
-# --- LA PHYSIQUE DU JOUEUR ---
+
+# LA PHYSIQUE DU JOUEUR
 func _physics_process(delta: float) -> void:
 	
 	# GRAVITÉ.
@@ -47,22 +48,11 @@ func _physics_process(delta: float) -> void:
 	if velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
 	
-	# Handle jump.
-	if Input.is_action_just_pressed("sauter") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		if has_node("JumpSfx"):
-			$JumpSfx.play()
-
-	# Get the input direction and handle the movement/deceleration.
-	var direction := Input.get_axis("promener_gauche", "promener_droite")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+	
+# Applique la physique
 	move_and_slide()
 
-# --- MORT DU JOUEUR ---
+# MORT DU JOUEUR
 func die():
 	# Désactive les contrôles du joueur.
 	set_physics_process(false)

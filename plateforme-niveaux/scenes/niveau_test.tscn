@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://mmlgpgsu7veb" path="res://assets/sprites/terrain_grass_block_top_right.png" id="9_duk5p"]
 [ext_resource type="Texture2D" uid="uid://hvdvqe5s0pev" path="res://assets/sprites/terrain_grass_block_bottom_left.png" id="10_ex7nm"]
 [ext_resource type="Texture2D" uid="uid://bbo0b3mdv7gcx" path="res://assets/sprites/terrain_grass_block_bottom_right.png" id="11_eph2o"]
-[ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scripts/menu_controle.tscn" id="12_danug"]
+[ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scenes/menu_controle.tscn" id="12_danug"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="13_rewv3"]
 [ext_resource type="PackedScene" uid="uid://dwvq0v5nu4niq" path="res://scenes/end_game.tscn" id="14_duk5p"]
 
