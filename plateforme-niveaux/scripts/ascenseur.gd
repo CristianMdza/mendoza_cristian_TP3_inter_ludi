@@ -11,11 +11,11 @@ func _ready() -> void:
 	var start = position_base_y
 	var end = position_base_y - range_y
 	
-	# Crée et configure le Tween
+	# Crée et configure le Tween.
 	tween = self.create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)  # Mouvement fluide.
 	tween.set_loops()                   # Boucle infinie.
 	
-	# Animation de va-et-vient vertical
+	# Animation de va-et-vient vertical.
 	tween.tween_property(self, "position:y", end, duration).from(start)
 	tween.tween_property(self, "position:y", start, duration).from(end)
