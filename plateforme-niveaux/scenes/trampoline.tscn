@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bx7yvdq3jw40l"]
+
+[ext_resource type="Script" uid="uid://crv2kance7v3x" path="res://scripts/trampoline.gd" id="1_1ne3y"]
+[ext_resource type="Texture2D" uid="uid://c8eobj7ix6w18" path="res://assets/sprites/spring.png" id="1_nytqh"]
+[ext_resource type="Texture2D" uid="uid://cdswrcbx02ri0" path="res://assets/sprites/spring_out.png" id="2_1ne3y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gay0"]
+atlas = ExtResource("1_nytqh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64cc3"]
+atlas = ExtResource("2_1ne3y")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqe70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gay0")
+}],
+"loop": true,
+"name": &"trampoline_immobile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64cc3")
+}],
+"loop": true,
+"name": &"trampoline_ouvert",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gay0"]
+size = Vector2(56, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64cc3"]
+size = Vector2(56, 60)
+
+[node name="Trampoline" type="Area2D"]
+script = ExtResource("1_1ne3y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oqe70")
+animation = &"trampoline_ouvert"
+
+[node name="CollisionShape2D_immobile" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_5gay0")
+
+[node name="CollisionShape2D_ouvert" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_64cc3")
+
+[node name="SonTrampoline" type="AudioStreamPlayer2D" parent="."]

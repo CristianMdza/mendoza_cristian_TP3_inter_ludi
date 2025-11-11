@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://uslerb5tjgwb"]
+
+[ext_resource type="Texture2D" uid="uid://btq633vm3t3xk" path="res://assets/sprites/fireball.png" id="1_cr6pm"]
+[ext_resource type="Script" uid="uid://cbmg42qn6ldau" path="res://scripts/boulefeu.gd" id="1_y8jm8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y8jm8"]
+radius = 14.0
+
+[node name="Boulefeu" type="Area2D"]
+script = ExtResource("1_y8jm8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cr6pm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y8jm8")
