@@ -2,7 +2,7 @@ extends Area2D
 
 @export var distance: float = 224.0        # 7 cases de 32px (7 * 32) : Distance du mouvement vertical.
 @export var speed: float = 1.0             # Vitesse du mouvement.
-@export var rotation_speed: float = 270.0  # Vitesse de rotation (degrés/sec).
+@export var rotation_speed: float = -270.0  # Vitesse de rotation (degrés/sec).
 @export var phase_offset: float = 0.0      # Décalage pour les mouvements intercalés.
 
 var start_y: float

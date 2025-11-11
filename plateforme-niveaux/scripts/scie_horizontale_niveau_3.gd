@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var distance: float = 96.0         # 3 cases de 32px (3 * 32) : Distance de déplacement horizontal.
+@export var distance: float = 64.0         # 2 cases de 32px (2 * 32) : Distance de déplacement horizontal.
 @export var speed: float = 0.5             # Vitesse du mouvement horizonal.
 @export var rotation_speed: float = 180.0  # Vitesse de rotation (degrés par seconde).
 
