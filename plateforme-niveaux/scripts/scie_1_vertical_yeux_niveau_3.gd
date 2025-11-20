@@ -8,6 +8,7 @@ var direction: int = 1
 var start_y: float
 
 func _ready():
+	$AnimatedSprite2D.play("ouvrir_yeux_scie")  # Joue automatiquement l’animation "ouvrir_yeux_scie" dès le début.
 	start_y = position.y                 # Sauvegarde la position de départ en Y.
 	$CollisionShape2D.disabled = false   # Active la collision.
 	connect("body_entered", Callable(self, "_on_body_entered"))  # Détecte le contact avec le joueur.

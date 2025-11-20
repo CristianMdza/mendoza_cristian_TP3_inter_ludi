@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp6ccapebieia"]
+[gd_scene load_steps=5 format=3 uid="uid://dnp813iqchngs"]
 
 [ext_resource type="Texture2D" uid="uid://dlxmxeq660paq" path="res://assets/sprites/hud_heart.png" id="2_7xp3i"]
 [ext_resource type="AudioStream" uid="uid://fbu6ptr8ejdr" path="res://assets/sounds/sfx_coin.ogg" id="3_2agou"]

@@ -1,38 +1,41 @@
-[gd_scene load_steps=35 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=38 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://c0af475cpbslq" path="res://assets/arriere_plans/montagne_foret_neige.png" id="2_p0bt2"]
-[ext_resource type="PackedScene" uid="uid://carxh0hmciq6" path="res://scenes/scie_horizontale_niveau_3.tscn" id="3_gax5v"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="3_ni1jg"]
 [ext_resource type="PackedScene" uid="uid://uslerb5tjgwb" path="res://scenes/boulefeu.tscn" id="4_gax5v"]
 [ext_resource type="PackedScene" uid="uid://dwvq0v5nu4niq" path="res://scenes/end_game.tscn" id="4_mmh6l"]
 [ext_resource type="Texture2D" uid="uid://dcepbid2o8w4k" path="res://assets/spritesheets/spritesheet-tiles-default.png" id="5_5l8ss"]
 [ext_resource type="PackedScene" uid="uid://dig8enhjnqwbo" path="res://scenes/boulefeu_2.tscn" id="6_tkr4a"]
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="6_xnlme"]
+[ext_resource type="PackedScene" uid="uid://cdkctwymw3to1" path="res://scenes/scie_1_horizontal_niveau_3.tscn" id="8_74rea"]
 [ext_resource type="PackedScene" uid="uid://c23kf5bcjyxji" path="res://scenes/boulefeu_4.tscn" id="8_diw74"]
 [ext_resource type="PackedScene" uid="uid://bhqe2rtmc8kfk" path="res://scenes/boulefeu_3.tscn" id="8_ltaro"]
 [ext_resource type="PackedScene" uid="uid://dirydc1jhbrdb" path="res://scenes/joueur.tscn" id="8_oeuwp"]
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="8_ydwbf"]
+[ext_resource type="PackedScene" uid="uid://6e31rdpcjy62" path="res://scenes/drapeau_victoire.tscn" id="9_74rea"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="9_m40i3"]
+[ext_resource type="PackedScene" uid="uid://cmvpjrvm6vrky" path="res://scenes/scie_2_horizontal_inverse_niveau_3.tscn" id="9_o1uv5"]
 [ext_resource type="PackedScene" uid="uid://hi7t64ijaxck" path="res://scenes/monnaie.tscn" id="10_8vkqi"]
 [ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scenes/menu_controle.tscn" id="11_rvs65"]
 [ext_resource type="PackedScene" uid="uid://dytpja2qcbap4" path="res://scenes/cle.tscn" id="12_ao7hb"]
 [ext_resource type="PackedScene" uid="uid://77ax8o5svi1b" path="res://scenes/escalier_bloc_top.tscn" id="12_b0jx8"]
 [ext_resource type="PackedScene" uid="uid://bomh7koi041an" path="res://scenes/obstacle_verrouille.tscn" id="12_mmh6l"]
 [ext_resource type="PackedScene" uid="uid://w6tman5bqiei" path="res://scenes/killzone.tscn" id="13_ao7hb"]
-[ext_resource type="PackedScene" uid="uid://k22mgw6t6lq5" path="res://scenes/scie.tscn" id="14_8sywa"]
-[ext_resource type="PackedScene" uid="uid://b0ukne8cha8in" path="res://scenes/scie__sens_inverse_niveau_3.tscn" id="14_p0bt2"]
 [ext_resource type="PackedScene" uid="uid://bxrgeepjetk2q" path="res://scenes/piege_apointes.tscn" id="14_tionb"]
 [ext_resource type="PackedScene" uid="uid://j5reeistl6nc" path="res://scenes/bloc_a_pointes.tscn" id="15_vkl7c"]
+[ext_resource type="PackedScene" uid="uid://mpiresrl18tn" path="res://scenes/scie_3_vertical_yeux_niveau_3.tscn" id="17_74rea"]
+[ext_resource type="PackedScene" uid="uid://r8ca23v4vr54" path="res://scenes/scie_1_vertical_yeux_niveau_3.tscn" id="17_diw74"]
+[ext_resource type="PackedScene" uid="uid://0cx55obfja2p" path="res://scenes/scie_2_vertical_inverse_yeux_niveau_3.tscn" id="18_74rea"]
 [ext_resource type="PackedScene" uid="uid://bx7yvdq3jw40l" path="res://scenes/trampoline.tscn" id="21_ed8ci"]
 [ext_resource type="PackedScene" uid="uid://dwyly67ox88yn" path="res://scenes/plate_forme_horizontale_niveau_3.tscn" id="22_ija34"]
-[ext_resource type="PackedScene" uid="uid://bdvok7assbr67" path="res://scenes/scie_niveau_3.tscn" id="22_p0bt2"]
 [ext_resource type="PackedScene" uid="uid://0svc2ldgdvra" path="res://scenes/bloc_rotation_gauche.tscn" id="24_iq4wj"]
 [ext_resource type="PackedScene" uid="uid://ci54y48tf2m7k" path="res://scenes/bloc_rotation_centre.tscn" id="25_hexwu"]
 [ext_resource type="PackedScene" uid="uid://mlrpn8ud0ps1" path="res://scenes/bloc_rotation.tscn" id="26_827h1"]
 [ext_resource type="PackedScene" uid="uid://crdjbgpkpy11x" path="res://scenes/killzone2.tscn" id="26_gax5v"]
 [ext_resource type="PackedScene" uid="uid://d4lekedhcqt2v" path="res://scenes/bloc_rotation_droit.tscn" id="26_vwnr8"]
 [ext_resource type="PackedScene" uid="uid://cipo5vtyms681" path="res://scenes/plate_forme_rotation_.tscn" id="27_827h1"]
+[ext_resource type="PackedScene" uid="uid://dc2xsao7grqqb" path="res://scenes/trampoline2.tscn" id="29_x5hwj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
@@ -46,29 +49,33 @@ position = Vector2(-745, -24)
 scale = Vector2(2.43751, 2.25539)
 texture = ExtResource("2_p0bt2")
 
-[node name="ScieHorizontaleNiveau3" parent="." instance=ExtResource("3_gax5v")]
-position = Vector2(-160, -127)
+[node name="BoulesFeuxGroupe" type="Node2D" parent="."]
 
-[node name="ScieHorizontaleNiveau4" parent="." instance=ExtResource("3_gax5v")]
-position = Vector2(-672, -127)
-
-[node name="Scie" parent="." instance=ExtResource("14_8sywa")]
-position = Vector2(-416, -224)
-
-[node name="Boulefeu" parent="." instance=ExtResource("4_gax5v")]
+[node name="Boulefeu" parent="BoulesFeuxGroupe" instance=ExtResource("4_gax5v")]
 position = Vector2(-609, -672)
 
-[node name="Boulefeu2" parent="." instance=ExtResource("6_tkr4a")]
+[node name="Boulefeu2" parent="BoulesFeuxGroupe" instance=ExtResource("6_tkr4a")]
 position = Vector2(-415, -608)
 
-[node name="Boulefeu3" parent="." instance=ExtResource("8_ltaro")]
+[node name="Boulefeu3" parent="BoulesFeuxGroupe" instance=ExtResource("8_ltaro")]
 position = Vector2(-224, -672)
 
-[node name="Boulefeu4" parent="." instance=ExtResource("8_diw74")]
+[node name="Boulefeu4" parent="BoulesFeuxGroupe" instance=ExtResource("8_diw74")]
 position = Vector2(-32, -608)
 
+[node name="DrapeauVictoire" parent="." instance=ExtResource("9_74rea")]
+position = Vector2(352, -544)
+
+[node name="SciesHorizontalesNiveau3Groupe" type="Node2D" parent="."]
+
+[node name="Scie1HorizontalNiveau3" parent="SciesHorizontalesNiveau3Groupe" instance=ExtResource("8_74rea")]
+position = Vector2(-160, -128)
+
+[node name="Scie2HorizontalInverseNiveau3" parent="SciesHorizontalesNiveau3Groupe" instance=ExtResource("9_o1uv5")]
+position = Vector2(-672, -128)
+
 [node name="DecorTileMapLayer2" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAPX/AAAGAAgAAAAIAPX/AAAGAAgAAAAJAPX/AAAGAAgAAADk/wgAAAABAA4AAADk/wcAAAABAA4AAADd/wcAAAABAA4AAADd/wgAAAABAA4AAADd/wMAAAABAA4AAADd/wIAAAABAA4AAADk/wMAAAABAA4AAADk/wIAAAABAA4AAAD1//n/AAALAAwAAAA=")
+tile_map_data = PackedByteArray("AADk/wgAAAABAA4AAADk/wcAAAABAA4AAADd/wcAAAABAA4AAADd/wgAAAABAA4AAADd/wMAAAABAA4AAADd/wIAAAABAA4AAADk/wMAAAABAA4AAADk/wIAAAABAA4AAAD1//n/AAALAAwAAAAIAPX/AAAGAAgAAAAJAPX/AAAGAAgAAAAKAPX/AAAGAAgAAAA=")
 tile_set = ExtResource("6_xnlme")
 
 [node name="PlancherTileMapLayer" type="TileMapLayer" parent="."]
@@ -76,11 +83,11 @@ tile_map_data = PackedByteArray("AADi/wsAAAABAAoAAADi/wwAAAAAAAoAAADi/w0AAAAAAAo
 tile_set = ExtResource("6_xnlme")
 
 [node name="DecorTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAFAPb/AAAGAAcAAAAFAPf/AAAGAAcAAAAGAPX/AAAGAAgAAAAGAPb/AAAGAAgAAAAGAPf/AAAGAAgAAAAHAPT/AAAGAAgAAAAHAPX/AAAFAAYAABAHAPb/AAAGAAcAAAAHAPf/AAAGAAcAAAAIAPT/AAAGAAgAAAAIAPX/AAAGAAUAAAAIAPb/AAAGAAgAAAAIAPf/AAAGAAgAAAAJAPT/AAAGAAgAAAAJAPX/AAAFAAYAAAAJAPb/AAAGAAYAAAAJAPf/AAAGAAYAAAAKAPX/AAAGAAgAAAAKAPb/AAAGAAgAAAAKAPf/AAAGAAgAAAALAPb/AAAGAAYAAAALAPf/AAAGAAYAAAAFAPX/AAAGAAQAAAAGAPT/AAAGAAQAAAAHAPP/AAAGAAQAAAAIAPP/AAAGAAUAAAAJAPP/AAAGAAMAAAAKAPT/AAAGAAMAAAALAPX/AAAGAAMAAADh/w0AAAALAAwAAAAEAA0AAAAAAAQAAAAFAA0AAAAAAAQAAAAGAA0AAAAAAAQAAAAHAA0AAAAAAAQAAAAIAA0AAAAAAAQAAAAJAA0AAAAAAAQAAAAKAA0AAAAAAAQAAAALAA0AAAAAAAQAAAAMAA0AAAAAAAQAAADt/w0AAAAAAAQAAADv/w0AAAAAAAQAAADw/w0AAAAAAAQAAADx/w0AAAAAAAQAAADy/w0AAAAAAAQAAADz/w0AAAAAAAQAAAD0/w0AAAAAAAQAAAD1/w0AAAAAAAQAAADr/wYAAAAKABAAAADr/woAAAAKABAAACDr/wkAAAAKAA8AAADr/wgAAAAKAA8AAADr/wcAAAAKAA8AAADo/wQAAAAKABAAAADo/wgAAAAKABAAACDo/wcAAAAKAA8AAADo/wYAAAAKAA8AAADo/wUAAAAKAA8AAAAAAPn/AAALAAwAAAABAPn/AAALAAwAAAACAPn/AAALAAwAAAADAPn/AAALAAwAAAAEAPn/AAALAAwAAAAFAPn/AAALAAwAAAAGAPn/AAALAAwAAAAHAPn/AAALAAwAAAAIAPn/AAALAAwAAAAIAPr/AAALAAwAAAAHAPr/AAALAAwAAAAGAPr/AAALAAwAAAAFAPr/AAALAAwAAAAEAPr/AAALAAwAAAAFAPv/AAALAAwAAAAGAPv/AAALAAwAAAAHAPv/AAALAAwAAAAHAPz/AAALAAwAAAAGAPz/AAALAAwAAAAGAP3/AAALAAwAAAAHAP3/AAALAAwAAAAHAP7/AAALAAwAAAAIAPz/AAALAAwAAAAIAPv/AAALAAwAAAAJAPr/AAALAAwAAAAHAP//AAACAAwAAAAGAP7/AAADAAEAAAAFAPz/AAADAAEAAAAEAPv/AAADAAEAAAADAPr/AAADAAEAAAAIAP3/AAADAAIAAAAJAPv/AAADAAIAAAAJAPn/AAADAAgAAAAIAPj/AAACAAwAAAAHAPj/AAACAAwAAAAGAPj/AAACAAwAAAAFAPj/AAACAAwAAAAEAPj/AAACAAwAAAADAPj/AAACAAwAAAACAPj/AAACAAwAAAABAPj/AAACAAwAAAAAAPj/AAACAA0AAAD///r/AAACAAwAAAAAAPr/AAACAAwAAAABAPr/AAACAAwAAAACAPr/AAACAAwAAAAFAP3/AAACAAIAAAAJAPz/AAACAAIAAAAKAPr/AAACAAIAAADk/wgAAAAPAAIAACDk/wcAAAAPAAIAAAAJAAcAAAAPAAAAAAAJAAgAAAAPAAEAAADd/wcAAAAPAAIAAADd/wgAAAAPAAIAACDu/w0AAAAAAAQAAADt//7/AAAAAAQAAADu//7/AAAAAAQAAADv//7/AAAAAAQAAADw//7/AAAAAAQAAADx//7/AAAAAAQAAADy//7/AAAAAAQAAADg/w0AAAALAAwAAADg/wwAAAALAAwAAADh/wwAAAALAAwAAADg/wsAAAALAAsAAADh/wsAAAALAAsAAADd/wMAAAAPAAIAACDd/wIAAAAPAAIAAADk/wMAAAAPAAIAACDk/wIAAAAPAAIAAAD///j/AAALAAsAAAD+//j/AAALAAsAAAD7//j/AAALAAsAAAD6//j/AAALAAsAAAD4//j/AAALAAsAAAD3//j/AAALAAsAAAD2//j/AAALAAsAAAD1//j/AAALAAsAAAD5//j/AAALAAsAAAD8//j/AAALAAsAAAD2//n/AAALAAwAAAD3//n/AAALAAwAAAD4//n/AAALAAwAAAD5//n/AAALAAwAAAD6//n/AAALAAwAAAD7//n/AAALAAwAAAD8//n/AAALAAwAAAD9//n/AAALAAwAAAD9//j/AAALAAsAAAD+//n/AAALAAwAAAD///n/AAALAAwAAAA=")
+tile_map_data = PackedByteArray("AADh/w0AAAALAAwAAAAEAA0AAAAAAAQAAAAFAA0AAAAAAAQAAAAGAA0AAAAAAAQAAAAHAA0AAAAAAAQAAAAIAA0AAAAAAAQAAAAJAA0AAAAAAAQAAAAKAA0AAAAAAAQAAAALAA0AAAAAAAQAAAAMAA0AAAAAAAQAAADt/w0AAAAAAAQAAADv/w0AAAAAAAQAAADw/w0AAAAAAAQAAADx/w0AAAAAAAQAAADy/w0AAAAAAAQAAADz/w0AAAAAAAQAAAD0/w0AAAAAAAQAAAD1/w0AAAAAAAQAAADr/wYAAAAKABAAAADr/woAAAAKABAAACDr/wkAAAAKAA8AAADr/wgAAAAKAA8AAADr/wcAAAAKAA8AAADo/wQAAAAKABAAAADo/wgAAAAKABAAACDo/wcAAAAKAA8AAADo/wYAAAAKAA8AAADo/wUAAAAKAA8AAAAAAPn/AAALAAwAAAABAPn/AAALAAwAAAACAPn/AAALAAwAAAADAPn/AAALAAwAAAAEAPn/AAALAAwAAAAFAPn/AAALAAwAAAAGAPn/AAALAAwAAAAHAPn/AAALAAwAAAAIAPn/AAALAAwAAAAIAPr/AAALAAwAAAAHAPr/AAALAAwAAAAGAPr/AAALAAwAAAAFAPr/AAALAAwAAAAEAPr/AAALAAwAAAAFAPv/AAALAAwAAAAGAPv/AAALAAwAAAAHAPv/AAALAAwAAAAHAPz/AAALAAwAAAAGAPz/AAALAAwAAAAGAP3/AAALAAwAAAAHAP3/AAALAAwAAAAHAP7/AAALAAwAAAAIAPz/AAALAAwAAAAIAPv/AAALAAwAAAAJAPr/AAALAAwAAAAHAP//AAACAAwAAAAGAP7/AAADAAEAAAAFAPz/AAADAAEAAAAEAPv/AAADAAEAAAADAPr/AAADAAEAAAAIAP3/AAADAAIAAAAJAPv/AAADAAIAAAAJAPn/AAADAAgAAAAIAPj/AAACAAwAAAAHAPj/AAACAAwAAAAGAPj/AAACAAwAAAAFAPj/AAACAAwAAAAEAPj/AAACAAwAAAADAPj/AAACAAwAAAACAPj/AAACAAwAAAABAPj/AAACAAwAAAAAAPj/AAACAA0AAAD///r/AAACAAwAAAAAAPr/AAACAAwAAAABAPr/AAACAAwAAAACAPr/AAACAAwAAAAFAP3/AAACAAIAAAAJAPz/AAACAAIAAAAKAPr/AAACAAIAAADk/wgAAAAPAAIAACDk/wcAAAAPAAIAAAAJAAcAAAAPAAAAAAAJAAgAAAAPAAEAAADd/wcAAAAPAAIAAADd/wgAAAAPAAIAACDu/w0AAAAAAAQAAADt//7/AAAAAAQAAADu//7/AAAAAAQAAADv//7/AAAAAAQAAADw//7/AAAAAAQAAADx//7/AAAAAAQAAADy//7/AAAAAAQAAADg/w0AAAALAAwAAADg/wwAAAALAAwAAADh/wwAAAALAAwAAADg/wsAAAALAAsAAADh/wsAAAALAAsAAADd/wMAAAAPAAIAACDd/wIAAAAPAAIAAADk/wMAAAAPAAIAACDk/wIAAAAPAAIAAAD///j/AAALAAsAAAD+//j/AAALAAsAAAD7//j/AAALAAsAAAD6//j/AAALAAsAAAD4//j/AAALAAsAAAD3//j/AAALAAsAAAD2//j/AAALAAsAAAD1//j/AAALAAsAAAD5//j/AAALAAsAAAD8//j/AAALAAsAAAD2//n/AAALAAwAAAD3//n/AAALAAwAAAD4//n/AAALAAwAAAD5//n/AAALAAwAAAD6//n/AAALAAwAAAD7//n/AAALAAwAAAD8//n/AAALAAwAAAD9//n/AAALAAwAAAD9//j/AAALAAsAAAD+//n/AAALAAwAAAD///n/AAALAAwAAAAGAPX/AAAGAAQAAAAGAPb/AAAGAAcAAAAGAPf/AAAGAAcAAAAHAPT/AAAGAAQAAAAHAPX/AAAGAAgAAAAHAPb/AAAGAAgAAAAHAPf/AAAGAAgAAAAIAPP/AAAGAAQAAAAIAPT/AAAGAAgAAAAIAPX/AAAFAAYAABAIAPb/AAAGAAcAAAAIAPf/AAAGAAcAAAAJAPP/AAAGAAUAAAAJAPT/AAAGAAgAAAAJAPX/AAAGAAUAAAAJAPb/AAAGAAgAAAAJAPf/AAAGAAgAAAAKAPT/AAAGAAgAAAAKAPX/AAAFAAYAAAAKAPb/AAAGAAYAAAAKAPf/AAAGAAYAAAALAPX/AAAGAAgAAAALAPb/AAAGAAgAAAALAPf/AAAGAAgAAAAKAPP/AAAGAAMAAAALAPT/AAAGAAMAAAAMAPX/AAAGAAMAAAAMAPb/AAAGAAYAAAAMAPf/AAAGAAYAAAA=")
 tile_set = ExtResource("6_xnlme")
 
 [node name="PorteNiveau" type="Area2D" parent="."]
-position = Vector2(544, -556)
+position = Vector2(608, -556)
 script = ExtResource("3_ni1jg")
 nouvelle_scene = ExtResource("4_mmh6l")
 metadata/_edit_group_ = true
@@ -97,19 +104,19 @@ shape = SubResource("RectangleShape2D_danug")
 [node name="ObstaclesGroupe" type="Node2D" parent="."]
 
 [node name="Obstacle" parent="ObstaclesGroupe" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
-position = Vector2(481, -543)
+position = Vector2(545, -543)
 
 [node name="Obstacle3" parent="ObstaclesGroupe" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
-position = Vector2(481, -607)
+position = Vector2(545, -607)
 
 [node name="Obstacle4" parent="ObstaclesGroupe" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
-position = Vector2(545, -631)
+position = Vector2(609, -631)
 
 [node name="Obstacle5" parent="ObstaclesGroupe" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
-position = Vector2(609, -607)
+position = Vector2(673, -607)
 
 [node name="Obstacle7" parent="ObstaclesGroupe" groups=["cle_bleu"] instance=ExtResource("12_mmh6l")]
-position = Vector2(609, -543)
+position = Vector2(673, -543)
 
 [node name="MonnaiesGroupe" type="Node2D" parent="."]
 
@@ -158,13 +165,19 @@ position = Vector2(-2208, -416)
 [node name="EscalierBlocTop2" parent="Escalier2" instance=ExtResource("12_b0jx8")]
 position = Vector2(-2208, -480)
 
-[node name="SciesGroupe" type="Node2D" parent="."]
+[node name="SciesVerticalesYeuxNiveau3Groupe" type="Node2D" parent="."]
 
-[node name="ScieNiveau3" parent="SciesGroupe" instance=ExtResource("22_p0bt2")]
+[node name="Scie1VerticalYeuxNiveau3" parent="SciesVerticalesYeuxNiveau3Groupe" instance=ExtResource("17_diw74")]
 position = Vector2(-1312, 544)
+scale = Vector2(0.5, 0.5)
 
-[node name="ScieSensInverseNiveau3" parent="SciesGroupe" instance=ExtResource("14_p0bt2")]
+[node name="Scie2VerticalInverseYeuxNiveau3" parent="SciesVerticalesYeuxNiveau3Groupe" instance=ExtResource("18_74rea")]
 position = Vector2(-1504, 416)
+scale = Vector2(0.5, 0.5)
+
+[node name="Scie3VerticalYeuxNiveau3" parent="SciesVerticalesYeuxNiveau3Groupe" instance=ExtResource("17_74rea")]
+position = Vector2(-416, -224)
+scale = Vector2(0.5, 0.5)
 
 [node name="PiegesAPointesGroupe" type="Node2D" parent="."]
 
@@ -228,7 +241,7 @@ position = Vector2(96, 608)
 [node name="Trampoline" parent="TrampolinesGroupe" instance=ExtResource("21_ed8ci")]
 position = Vector2(-1952, -544)
 
-[node name="Trampoline2" parent="TrampolinesGroupe" instance=ExtResource("21_ed8ci")]
+[node name="Trampoline2" parent="TrampolinesGroupe" instance=ExtResource("29_x5hwj")]
 position = Vector2(-1632, -608)
 
 [node name="Trampoline3" parent="TrampolinesGroupe" instance=ExtResource("21_ed8ci")]

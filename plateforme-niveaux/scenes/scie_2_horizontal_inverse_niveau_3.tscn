@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmvpjrvm6vrky"]
+
+[ext_resource type="Script" uid="uid://dggs6ebvt5ima" path="res://scripts/scie_2_horizontal_inverse_niveau_3.gd" id="1_rd5sr"]
+[ext_resource type="Texture2D" uid="uid://boxb23skrfkv6" path="res://assets/sprites/saw.png" id="2_fqbe1"]
+[ext_resource type="AudioStream" uid="uid://cvgmegihnupg6" path="res://assets/sounds/sfx_circular_saw_pixabay.mp3" id="3_uqh8e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hxwh"]
+radius = 27.0
+height = 56.0
+
+[node name="Scie2HorizontalInverseNiveau3" type="Area2D"]
+script = ExtResource("1_rd5sr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fqbe1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_uqh8e")
+autoplay = true
+max_distance = 200.0
+attenuation = 1.5
+parameters/looping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5hxwh")

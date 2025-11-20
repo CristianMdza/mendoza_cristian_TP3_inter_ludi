@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bgd2mer30cim4"]
+[gd_scene load_steps=16 format=4 uid="uid://bgd2mer30cim4"]
 
 [ext_resource type="Texture2D" uid="uid://thw5ttmlqd4p" path="res://assets/arriere_plans/background_montagne.png" id="2_r4l43"]
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="2_rdxbm"]
@@ -7,10 +7,12 @@
 [ext_resource type="TileSet" uid="uid://cwqycux5h0q2u" path="res://assets/spritesheets/paysage_tile_set.tres" id="5_5ti7h"]
 [ext_resource type="PackedScene" uid="uid://de82iea1y2ek7" path="res://scenes/panneau_message.tscn" id="6_x3gr2"]
 [ext_resource type="PackedScene" uid="uid://dirydc1jhbrdb" path="res://scenes/joueur.tscn" id="7_6868w"]
+[ext_resource type="PackedScene" uid="uid://6e31rdpcjy62" path="res://scenes/drapeau_victoire.tscn" id="8_lsaug"]
 [ext_resource type="Script" uid="uid://cnf4o5qr4x1by" path="res://scripts/controle_camera.gd" id="8_y0sra"]
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="9_y4csj"]
 [ext_resource type="PackedScene" uid="uid://hi7t64ijaxck" path="res://scenes/monnaie.tscn" id="10_3hkp0"]
 [ext_resource type="PackedScene" uid="uid://j05okgtuaimk" path="res://scenes/menu_controle.tscn" id="11_htidv"]
+[ext_resource type="PackedScene" uid="uid://w6tman5bqiei" path="res://scenes/killzone.tscn" id="12_r4l43"]
 [ext_resource type="PackedScene" uid="uid://ccox6m3u0rcsd" path="res://scenes/feu_camp.tscn" id="13_lsaug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
@@ -41,25 +43,51 @@ position = Vector2(0.5, 11.5)
 shape = SubResource("RectangleShape2D_danug")
 
 [node name="PlancherTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD9/w0AAAAGAA8AAAD+/wwAAAAIAAEAAAADAAwAAAAIAAEAAAABAAwAAAAIAAIAAAACAA0AAAAGAA8AAAACAAwAAAAIAAAAAAD9/wwAAAAHABEAAAD9/wsAAAAHAA4AAAD9/woAAAAHABEAAAD9/wkAAAAHAA4AAAD//wsAAAAHAAYAAAAAAAsAAAAHAAYAAAD+/wsAAAAHAA8AAAD//wgAAAAGAA0AAAABAAsAAAAHAA8AAAACAAsAAAAHAA8AAAADAAsAAAAHAA8AAAAEAAsAAAAHAAYAAAAFAAsAAAAHAAYAAAAGAAwAAAAIAAIAAAAHAA0AAAAQAA4AAAAHAAwAAAAQAA4AAAAHAAsAAAAQAA4AAAAHAAoAAAAQAA4AAAAIAAoAAAAQAA4AAAAJAAoAAAAPAA8AAAAKAAoAAAAPAA8AACALAAsAAAAPAA8AAAAMAAsAAAAPAA8AACANAAsAAAAPAA8AACAOAAsAAAAPAA8AACAQAAoAAAAPAA8AACARAAoAAAAPAA8AAAAPAAsAAAAPAA8AAAASAAoAAAAQAA4AAAATAAoAAAAQAA4AAAATAAsAAAAQAA4AAAATAAwAAAAQAA4AAAATAA0AAAAQAA4AAAAUAAoAAAAHAAYAAAAVAAoAAAAHAAYAAAAWAAoAAAAHAA0AAAAWAAsAAAAGAA4AAAAWAAwAAAAGAA4AAAAWAA0AAAAGAA8AAAAWAAkAAAAGAA4AAAAWAAgAAAAGAA4AAAAWAAcAAAAGAA4AAAAWAAYAAAAGAA4AAAAWAAUAAAAGAA4AAAAWAAQAAAAGAA4AAAAWAAMAAAAGAA0AAAARAAQAAAAIAAAAAAARAAMAAAAHAA8AAAAQAAMAAAAHAA8AAAAQAAQAAAAIAAIAAAARAAUAAAAIAAIAAAASAAYAAAAGAA8AAAASAAUAAAAHABAAAAASAAQAAAAHABAAAAASAAMAAAAHAA0AAAAPAAMAAAAHAAUAAAAGAAsAAAAGABEAABAGAAoAAAAGABAAABAEAAYAAAAIAAEAAAADAAYAAAAIAAMAAAABAAYAAAAIAAIAAAACAAYAAAAIAAMAAAD9/wQAAAAHAA4AAAD+/wQAAAAHAA8AAAD//wQAAAAHAAYAAAAAAAQAAAAHAAMAAAABAAUAAAAHAA4AAAACAAUAAAAHAA8AAAADAAUAAAAHAA8AAAAEAAUAAAAHAA8AAAAFAAUAAAAHAAQAAAAKAAQAAAAHAAkAAAALAAQAAAAHAAgAAAAJAAQAAAAHAAoAAAAHAAcAAAAEAAwAAAD+/wUAAAAIAAEAAAD9/wUAAAAIAAIAAAAAAAUAAAAJAAUAAAD//wUAAAAJAAYAAAAAAAYAAAAJAAgAAAD//wYAAAAJAAkAAAD9/wcAAAAJAAkAAAD+/wcAAAAJAAgAAAD+/wYAAAAJAAUAAAD9/wYAAAAJAAYAAAD+/wgAAAAJAAsAAAAAAAcAAAAJAAsAAAD//wcAAAAJAAwAAAD9/wgAAAAJAAwAAAD//wkAAAAHABAAAAD+/wkAAAAHAA8AAAD+/woAAAAIAAAAAAD//woAAAAHABAAAAA=")
+tile_map_data = PackedByteArray("AAD9/w0AAAAGAA8AAAD+/wwAAAAIAAEAAAADAAwAAAAIAAEAAAABAAwAAAAIAAIAAAACAA0AAAAGAA8AAAACAAwAAAAIAAAAAAD9/wwAAAAHABEAAAD9/wsAAAAHAA4AAAD9/woAAAAHABEAAAD9/wkAAAAHAA4AAAD//wsAAAAHAAYAAAAAAAsAAAAHAAYAAAD+/wsAAAAHAA8AAAD//wgAAAAGAA0AAAABAAsAAAAHAA8AAAACAAsAAAAHAA8AAAADAAsAAAAHAA8AAAAEAAsAAAAHAAYAAAAFAAsAAAAHAAYAAAAGAAwAAAAIAAIAAAAHAA0AAAAQAA4AAAAHAAwAAAAQAA4AAAAHAAsAAAAQAA4AAAAHAAoAAAAQAA4AAAAIAAoAAAAQAA4AAAAJAAoAAAAPAA8AAAAKAAoAAAAPAA8AACALAAsAAAAPAA8AAAAMAAsAAAAPAA8AACANAAsAAAAPAA8AACAWAAoAAAAGAA0AAAAWAAsAAAAGAA4AAAAWAAwAAAAGAA4AAAAWAA0AAAAGAA8AAAAWAAkAAAADAA0AAAAWAAgAAAAGAA4AAAAWAAcAAAAGAA4AAAAWAAYAAAAGAA4AAAAWAAUAAAAGAA4AAAAWAAQAAAAGAA4AAAAWAAMAAAAGAA0AAAARAAQAAAAIAAAAAAARAAMAAAAHAA8AAAAQAAMAAAAHAA8AAAAQAAQAAAAIAAIAAAARAAUAAAAIAAIAAAASAAYAAAAGAA8AAAASAAUAAAAHABAAAAASAAQAAAAHABAAAAASAAMAAAAHAA0AAAAPAAMAAAAHAAUAAAAGAAsAAAAGABEAABAGAAoAAAAGABAAABAEAAYAAAAIAAEAAAADAAYAAAAIAAMAAAABAAYAAAAIAAIAAAACAAYAAAAIAAMAAAD9/wQAAAAHAA4AAAD+/wQAAAAHAA8AAAD//wQAAAAHAAYAAAAAAAQAAAAHAAMAAAABAAUAAAAHAA4AAAACAAUAAAAHAA8AAAADAAUAAAAHAA8AAAAEAAUAAAAHAA8AAAAFAAUAAAAHAAQAAAAKAAQAAAAHAAkAAAALAAQAAAAHAAgAAAAJAAQAAAAHAAoAAAAHAAcAAAAEAAwAAAD+/wUAAAAIAAEAAAD9/wUAAAAIAAIAAAAAAAUAAAAJAAUAAAD//wUAAAAJAAYAAAAAAAYAAAAJAAgAAAD//wYAAAAJAAkAAAD9/wcAAAAJAAkAAAD+/wcAAAAJAAgAAAD+/wYAAAAJAAUAAAD9/wYAAAAJAAYAAAD+/wgAAAAJAAsAAAAAAAcAAAAJAAsAAAD//wcAAAAJAAwAAAD9/wgAAAAJAAwAAAD//wkAAAAHABAAAAD+/wkAAAAHAA8AAAD+/woAAAAIAAAAAAD//woAAAAHABAAAAAOAAsAAAAPAA8AAAAPAAoAAAAPAA8AACAQAAoAAAAPAA8AAAARAAoAAAAQAA4AAAASAAoAAAAQAA4AAAASAAsAAAAQAA4AAAASAAwAAAAQAA4AAAASAA0AAAAQAA4AAAA=")
 tile_set = ExtResource("5_5ti7h")
 
 [node name="DecorTileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAkAAAAOABEAAAAIAAkAAAAOABEAAAAIAA0AAAAAAAMAAAAJAA0AAAAAAAMAAAAKAA0AAAAAAAMAAAALAA0AAAAAAAMAAAAMAA0AAAAAAAMAAAANAA0AAAAAAAMAAAAOAA0AAAAAAAMAAAAPAA0AAAAAAAMAAAAQAA0AAAAAAAMAAAARAA0AAAAAAAMAAAASAA0AAAAAAAMAAAAWAAkAAAAPAAQAAGAWAAcAAAAPAAQAAGAWAAUAAAAPAAQAAGAWAAMAAAAPAAQAAGASAAUAAAAPAAQAAGASAAMAAAAPAAQAAGAQAAIAAAAPAAwAAAATAAkAAAAOABEAAAASAAkAAAAOABEAAAACAAQAAAAPAA0AAAAEAAQAAAAOAAEAAAAAAAMAAAAOAAsAAAAKAAMAAAAKAAsAAAD9/wMAAAAOAAAAAAD//wMAAAAOAAAAAAABAAkAAAAPAAAAAAABAAoAAAAPAAEAAAAAAAoAAAAKABEAAAACAAoAAAAOAAAAAAARAAIAAAAOAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAkAAAAOABEAAAAIAAkAAAAOABEAAAAIAA0AAAAAAAMAAAAJAA0AAAAAAAMAAAAKAA0AAAAAAAMAAAALAA0AAAAAAAMAAAAMAA0AAAAAAAMAAAANAA0AAAAAAAMAAAAOAA0AAAAAAAMAAAAPAA0AAAAAAAMAAAAQAA0AAAAAAAMAAAAWAAkAAAAPAAQAAGAWAAcAAAAPAAQAAGAWAAUAAAAPAAQAAGAWAAMAAAAPAAQAAGASAAUAAAAPAAQAAGASAAMAAAAPAAQAAGAQAAIAAAAPAAwAAAACAAQAAAAPAA0AAAAKAAMAAAAKAAsAAAD9/wMAAAAOAAAAAAD//wMAAAAOAAAAAAABAAkAAAAPAAAAAAABAAoAAAAPAAEAAAAAAAoAAAAKABEAAAACAAoAAAAOAAAAAAARAAIAAAAOAAAAAAADAAQAAAAOAAEAAAARAAkAAAAOABEAAAASAAkAAAAOABEAAAARAA0AAAAAAAMAAAA=")
 tile_set = ExtResource("5_5ti7h")
 
 [node name="PanneauMessage" parent="." groups=["panneaux"] instance=ExtResource("6_x3gr2")]
 position = Vector2(352, 704)
 message = "Bienvenue au niveau #1 !"
 
-[node name="FeuCamp" parent="." instance=ExtResource("13_lsaug")]
+[node name="PanneauMessage2" parent="." groups=["panneaux"] instance=ExtResource("6_x3gr2")]
+position = Vector2(1152, 640)
+message = "Méfiez-vous de l'âbime 🥴 !"
+
+[node name="DrapeauVictoire" parent="." instance=ExtResource("8_lsaug")]
+position = Vector2(32, 224)
+
+[node name="FeuxCampsGroupe" type="Node2D" parent="."]
+
+[node name="FeuCamp" parent="FeuxCampsGroupe" instance=ExtResource("13_lsaug")]
 position = Vector2(288, 673)
 
-[node name="FeuCamp2" parent="." instance=ExtResource("13_lsaug")]
+[node name="FeuCamp2" parent="FeuxCampsGroupe" instance=ExtResource("13_lsaug")]
 position = Vector2(1440, 160)
 
-[node name="FeuCamp3" parent="." instance=ExtResource("13_lsaug")]
-position = Vector2(224, 288)
+[node name="FeuCamp3" parent="FeuxCampsGroupe" instance=ExtResource("13_lsaug")]
+position = Vector2(320, 288)
+
+[node name="MonnaiesGroupe" type="Node2D" parent="."]
+
+[node name="Monnaie" parent="MonnaiesGroupe" instance=ExtResource("10_3hkp0")]
+position = Vector2(417, 160)
+
+[node name="Monnaie2" parent="MonnaiesGroupe" instance=ExtResource("10_3hkp0")]
+position = Vector2(800, 97)
+
+[node name="Monnaie3" parent="MonnaiesGroupe" instance=ExtResource("10_3hkp0")]
+position = Vector2(1056, 97)
+
+[node name="Monnaie4" parent="MonnaiesGroupe" instance=ExtResource("10_3hkp0")]
+position = Vector2(1312, 353)
+
+[node name="Monnaie5" parent="MonnaiesGroupe" instance=ExtResource("10_3hkp0")]
+position = Vector2(832, 608)
 
 [node name="Joueur" parent="." instance=ExtResource("7_6868w")]
 position = Vector2(96, 706)
@@ -75,22 +103,11 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 script = ExtResource("8_y0sra")
 
-[node name="Monnaie" parent="." instance=ExtResource("10_3hkp0")]
-position = Vector2(417, 160)
-
-[node name="Monnaie2" parent="." instance=ExtResource("10_3hkp0")]
-position = Vector2(800, 97)
-
-[node name="Monnaie3" parent="." instance=ExtResource("10_3hkp0")]
-position = Vector2(1056, 97)
-
-[node name="Monnaie4" parent="." instance=ExtResource("10_3hkp0")]
-position = Vector2(1312, 353)
-
-[node name="Monnaie5" parent="." instance=ExtResource("10_3hkp0")]
-position = Vector2(865, 608)
-
 [node name="MenuControle" parent="." instance=ExtResource("11_htidv")]
+
+[node name="Killzone" parent="." instance=ExtResource("12_r4l43")]
+position = Vector2(0, 894)
 
 [connection signal="body_entered" from="PorteNiveau" to="PorteNiveau" method="_on_body_entered"]
 [connection signal="body_entered" from="PanneauMessage" to="PanneauMessage" method="show_message"]
+[connection signal="body_entered" from="PanneauMessage2" to="PanneauMessage2" method="show_message"]

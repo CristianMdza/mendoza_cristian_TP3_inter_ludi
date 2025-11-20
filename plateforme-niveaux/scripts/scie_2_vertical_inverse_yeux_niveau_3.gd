@@ -2,11 +2,12 @@ extends Area2D
 
 @export var distance: float = 96.0          # 3 cases de 32px (3 * 32) : Distance de déplacement vertical.
 @export var speed: float = 0.5              # Vitesse du mouvement vertical.
-@export var rotation_speed: float = 180.0   # Vitesse de rotation (degrés par seconde).
+@export var rotation_speed: float = -180.0   # Vitesse de rotation (degrés par seconde).
 
 var start_y: float
 
 func _ready():
+	$AnimatedSprite2D.play("ouvrir_yeux_scie")  # Joue automatiquement l’animation "ouvrir_yeux_scie" dès le début.
 	start_y = position.y   # Sauvegarde la position de départ en Y.
 	connect("body_entered", Callable(self, "_on_body_entered"))  # Détecte le contact avec le joueur.
 

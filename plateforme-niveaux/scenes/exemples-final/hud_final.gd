@@ -9,5 +9,5 @@ func _ready() -> void:
 func retroaction_monnaie(valeur_monnaies):
 	# Met à jour le label et joue le son quand une monnaie est collectée.
 	%MonnaiesLabel.text = str(valeur_monnaies)
-	# On joue un "son" associé à la collecte de monnaie.
+	# On joue un "son associé à la collecte de monnaie.
 	%MonnaiesSFX.play()

@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://6e31rdpcjy62"]
+
+[ext_resource type="Script" uid="uid://cnj1te1h6jv4c" path="res://scripts/drapeau_victoire.gd" id="1_x8g0j"]
+[ext_resource type="Texture2D" uid="uid://b451riwv3hp5x" path="res://assets/sprites/flag_green_a.png" id="2_x8g0j"]
+[ext_resource type="Texture2D" uid="uid://b4tpd3x47lerv" path="res://assets/sprites/flag_green_b.png" id="3_xr7q7"]
+[ext_resource type="AudioStream" uid="uid://c7gwbul2rel4f" path="res://assets/sounds/Wood Burning in Fireplace 4 - QuickSounds.com.mp3" id="4_juf0a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpak2"]
+atlas = ExtResource("2_x8g0j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juf0a"]
+atlas = ExtResource("3_xr7q7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nys6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpak2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juf0a")
+}],
+"loop": true,
+"name": &"mouvement_drapeau",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs23y"]
+size = Vector2(56, 41)
+
+[node name="DrapeauVictoire" type="Area2D"]
+script = ExtResource("1_x8g0j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3nys6")
+animation = &"mouvement_drapeau"
+frame = 1
+frame_progress = 0.219908
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_juf0a")
+autoplay = true
+max_distance = 200.0
+attenuation = 1.5
+parameters/looping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_vs23y")

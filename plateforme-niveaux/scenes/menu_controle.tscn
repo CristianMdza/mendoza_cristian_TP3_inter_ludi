@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://j05okgtuaimk"]
+[gd_scene load_steps=11 format=3 uid="uid://j05okgtuaimk"]
 
 [ext_resource type="Script" uid="uid://be02vcw1pg0va" path="res://scripts/menu_controle.gd" id="1_5qrj1"]
 [ext_resource type="Texture2D" uid="uid://crhkoo4vld02q" path="res://assets/spritesheets/close_icon.tres" id="2_5qrj1"]
@@ -11,8 +11,14 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.137255, 0.0980392, 0.286275, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qrj1"]
+bg_color = Color(0.0392157, 0.576471, 0.635294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmyl1"]
+bg_color = Color(0.0392157, 0.576471, 0.635294, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kftfl"]
-bg_color = Color(0.320686, 0.310028, 0.462429, 1)
+bg_color = Color(0.0397769, 0.574802, 0.636618, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -38,6 +44,7 @@ region = Rect2(350, 350, 50, 50)
 process_mode = 3
 script = ExtResource("1_5qrj1")
 metadata/_edit_vertical_guides_ = [512.0]
+metadata/_edit_horizontal_guides_ = [384.0]
 
 [node name="PauseMenu" type="Panel" parent="."]
 visible = false
@@ -63,6 +70,7 @@ offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5qrj1")
 text = "Instructions"
 
 [node name="ContinueButton" type="Button" parent="PauseMenu"]
@@ -79,6 +87,7 @@ offset_bottom = 138.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_gmyl1")
 text = "Continuer"
 
 [node name="InstructionsScreen" type="Panel" parent="PauseMenu"]
@@ -89,7 +98,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 218.0
-offset_top = 191.0
+offset_top = 149.0
 offset_right = -217.0
 offset_bottom = -148.0
 grow_horizontal = 2
@@ -101,10 +110,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -72.0
-offset_top = 17.0
-offset_right = -22.0
-offset_bottom = 75.0
+offset_left = -88.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = 88.0
 grow_horizontal = 0
 icon = ExtResource("2_5qrj1")
 
@@ -115,30 +124,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 28.0
 offset_top = 158.0
-offset_right = -22.0
-offset_bottom = -22.0
+offset_right = -27.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
-text = "A ou D : Marcher
-Espace : Sauter
-Flèche du haut : Monter 
-Flèche du bas: Descendre 
-Échapper : Pause"
+text = "[→] ou [D] : Marcher à Droite
+[←] ou [A] : Marcher à Gauche
+[Espace] : Sauter
+[↑] ou [W] : Monter (Ex: Échelle)
+[↓] ou [S] : Descendre (Ex: Échelle)
+[Échap] : Mettre le Jeu en Pause"
 
 [node name="InstructionsTitle" type="Label" parent="PauseMenu/InstructionsScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = 17.0
-offset_right = -22.0
-offset_bottom = -253.0
+offset_left = 31.0
+offset_top = 21.0
+offset_right = -23.0
+offset_bottom = -372.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 48
-text = "Instructions"
+text = "🎮 Contrôles du Jeu"
 
 [node name="PauseButton" type="Button" parent="."]
 anchors_preset = 1

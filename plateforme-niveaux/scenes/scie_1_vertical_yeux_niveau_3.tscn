@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://r8ca23v4vr54"]
+
+[ext_resource type="Script" uid="uid://b016ne68u4r14" path="res://scripts/scie_1_vertical_yeux_niveau_3.gd" id="1_uisv0"]
+[ext_resource type="Texture2D" uid="uid://ma5n62p6tax3" path="res://assets/spritesheets/spritesheet-enemies-double.png" id="2_a1oad"]
+[ext_resource type="AudioStream" uid="uid://cvgmegihnupg6" path="res://assets/sounds/sfx_circular_saw_pixabay.mp3" id="3_3bgwd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a0b4"]
+atlas = ExtResource("2_a1oad")
+region = Rect2(896, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqq3a"]
+atlas = ExtResource("2_a1oad")
+region = Rect2(384, 896, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nys6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a0b4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqq3a")
+}],
+"loop": true,
+"name": &"ouvrir_yeux_scie",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hxwh"]
+radius = 55.0
+height = 110.0
+
+[node name="Scie1VerticalYeuxNiveau3" type="Area2D"]
+script = ExtResource("1_uisv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3nys6")
+animation = &"ouvrir_yeux_scie"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3bgwd")
+autoplay = true
+max_distance = 200.0
+attenuation = 1.5
+parameters/looping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5hxwh")
