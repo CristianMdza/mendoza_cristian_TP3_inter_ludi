@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://bduvelojw5swt" path="res://scripts/porte_niveau.gd" id="13_502yv"]
 [ext_resource type="PackedScene" uid="uid://ccox6m3u0rcsd" path="res://scenes/feu_camp.tscn" id="16_ddliv"]
 [ext_resource type="PackedScene" uid="uid://dlynv50j15psb" path="res://scenes/plate_forme_horizontale.tscn" id="17_48fm7"]
-[ext_resource type="PackedScene" uid="uid://bo2wh1bw38s54" path="res://scenes/colline_sourire.tscn" id="19_48fm7"]
+[ext_resource type="PackedScene" uid="uid://bo2wh1bw38s54" path="res://scenes/carre_dormant.tscn" id="19_48fm7"]
 [ext_resource type="PackedScene" uid="uid://dd65fdshmk4al" path="res://scenes/escalier_bloc_bottom.tscn" id="20_a5eee"]
 [ext_resource type="PackedScene" uid="uid://c3amoeyy6kjry" path="res://scenes/escalier_bloc_center.tscn" id="21_upom3"]
 [ext_resource type="PackedScene" uid="uid://sfv2qrenm4yh" path="res://scenes/drapeau_victoire.tscn" id="22_a5eee"]
@@ -118,38 +118,22 @@ position = Vector2(1440, 288)
 position = Vector2(1632, 288)
 
 [node name="CactusDangereux6" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(928, 96)
+position = Vector2(960, 96)
 rotation = -3.14159
 
 [node name="CactusDangereux7" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(992, 96)
+position = Vector2(1152, 96)
 rotation = -3.14159
 
 [node name="CactusDangereux8" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1120, 96)
+position = Vector2(1336, 96)
 rotation = -3.14159
 
 [node name="CactusDangereux9" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1184, 96)
+position = Vector2(1528, 96)
 rotation = -3.14159
 
 [node name="CactusDangereux10" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1312, 96)
-rotation = -3.14159
-
-[node name="CactusDangereux11" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1376, 96)
-rotation = -3.14159
-
-[node name="CactusDangereux12" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1504, 96)
-rotation = -3.14159
-
-[node name="CactusDangereux13" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
-position = Vector2(1568, 96)
-rotation = -3.14159
-
-[node name="CactusDangereux14" parent="CactusDangereux" instance=ExtResource("9_7rg5r")]
 position = Vector2(1312, 1056)
 
 [node name="BuissonsDangereux" type="Node2D" parent="."]
@@ -163,10 +147,7 @@ position = Vector2(1888, 1056)
 [node name="Collines_sourires" type="Node2D" parent="."]
 
 [node name="CollineSourire" parent="Collines_sourires" instance=ExtResource("19_48fm7")]
-position = Vector2(864, 800)
-
-[node name="CollineSourire2" parent="Collines_sourires" instance=ExtResource("19_48fm7")]
-position = Vector2(1568, 1056)
+position = Vector2(832, 794)
 
 [node name="monnaies" type="Node2D" parent="."]
 

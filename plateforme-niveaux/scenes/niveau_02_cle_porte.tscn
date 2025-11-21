@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://dy0v8872jlfyb"]
+[gd_scene load_steps=40 format=4 uid="uid://dy0v8872jlfyb"]
 
 [ext_resource type="PackedScene" uid="uid://dscroh4yyuxie" path="res://scenes/exemples-final/hud_final.tscn" id="1_d266p"]
 [ext_resource type="Texture2D" uid="uid://c0af475cpbslq" path="res://assets/arriere_plans/montagne_foret_neige.png" id="2_p0bt2"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://ckt61c5qe1tui" path="res://scenes/boule_feu_2.tscn" id="36_x5hwj"]
 [ext_resource type="PackedScene" uid="uid://8s8cwfm3qmol" path="res://scenes/boule_feu_1.tscn" id="37_g1qhf"]
 [ext_resource type="AudioStream" uid="uid://bn4dwwfh7ky1f" path="res://assets/sounds/musique_bel_hiver_pixabay.mp3" id="37_ybot8"]
+[ext_resource type="PackedScene" uid="uid://dw5c25mvjj4wa" path="res://scenes/monstre.tscn" id="38_ybot8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_danug"]
 size = Vector2(25, 53)
@@ -63,6 +64,12 @@ position = Vector2(-224, -672)
 
 [node name="BouleFeu4" parent="BoulesFeuxGroupe" instance=ExtResource("6_g1qhf")]
 position = Vector2(-32, -608)
+
+[node name="BouleFeu5" parent="BoulesFeuxGroupe" instance=ExtResource("37_g1qhf")]
+position = Vector2(-2016, 609)
+
+[node name="BouleFeu6" parent="BoulesFeuxGroupe" instance=ExtResource("36_x5hwj")]
+position = Vector2(-1952, 674)
 
 [node name="SciesHorizontalesNiveau3Groupe" type="Node2D" parent="."]
 
@@ -214,9 +221,6 @@ position = Vector2(-608, 800)
 [node name="BlocAPointes2" parent="BlocsAPointesGroupe" instance=ExtResource("15_vkl7c")]
 position = Vector2(-1248, 800)
 
-[node name="BlocAPointes3" parent="BlocsAPointesGroupe" instance=ExtResource("15_vkl7c")]
-position = Vector2(-928, 608)
-
 [node name="PlateFormeHorizontaleNiveau3" parent="." instance=ExtResource("22_ija34")]
 position = Vector2(-256, 224)
 
@@ -251,6 +255,10 @@ position = Vector2(-1984, 108)
 [node name="DrapeauVictoire" parent="." instance=ExtResource("9_74rea")]
 position = Vector2(352, -544)
 
+[node name="Monstre" parent="." instance=ExtResource("38_ybot8")]
+position = Vector2(-927, 602)
+scale = Vector2(0.6, 0.6)
+
 [node name="Joueur" parent="." instance=ExtResource("8_oeuwp")]
 position = Vector2(607, 577)
 metadata/_edit_group_ = true
@@ -271,13 +279,13 @@ script = ExtResource("9_m40i3")
 position = Vector2(-1984, 481)
 groupe_cle = "cle_bleu"
 
-[node name="Killzone2" parent="." instance=ExtResource("26_gax5v")]
-position = Vector2(-1216, -66)
-
 [node name="Killzone" parent="." instance=ExtResource("13_ao7hb")]
 position = Vector2(-511, 894)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Killzone2" parent="." instance=ExtResource("26_gax5v")]
+position = Vector2(-1216, -66)
+
+[node name="MusiqueAmbianceHiver" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("37_ybot8")
 autoplay = true
 parameters/looping = true
