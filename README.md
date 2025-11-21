@@ -2,8 +2,8 @@
 
 **Projet-exemple de jeu de plateforme 2D** réalisé en Godot pour le cours *Interactivité Ludique*, Automne 2025, Collège Montmorency.  
 
-Petit jeu où un **alien** explore plusieurs mondes (forêt montagneuse, temple souterrain/désert, monde glacial) remplis d’obstacles, ennemis, pièges et objets à ramasser.  
-Le but : **atteindre la porte finale de chaque niveau** et trouver la clé du dernier niveau pour terminer le jeu.
+Petit jeu où un **alien** explore plusieurs mondes (forêt montagneuse, temple souterrain/désert, monde glacial) remplis d’obstacles, ennemis, pièges, objets à ramasser, etc.  
+Le but : **atteindre la porte finale de chaque niveau**, essayer de **Collecter** toutes les monnaies afin de les accumuler et trouver la clé du dernier niveau pour ouvrir la porte et terminer le jeu au complet.
 
 ---
 
@@ -26,9 +26,9 @@ J’ai effectué un **fork** du projet original pour le modifier et lui donner u
 ## Modifications apportées
 
 - Création de **3 nouveaux niveaux** :  
-  - Forêt montagneuse  
-  - Temple souterrain/désert  
-  - Monde glacial/enneigé avec montagnes
+  - Forêt montagneuse (niveau 1)
+  - Temple souterrain/désert (niveau 2)
+  - Monde glacial/enneigé avec montagnes (niveau 3)
 - Nouveau **personnage alien violet** avec animations  
 - Ajout de mécaniques et objets :  
   - Zones de mort  
@@ -40,11 +40,12 @@ J’ai effectué un **fork** du projet original pour le modifier et lui donner u
   - Trampolines  
   - Objets à ramasser (pièces, cœurs, etc.)  
   - Objets sonores et pièges  
-  - Ennemis  
+  - Ennemis
+  - etc...  
 - **Textures et couleurs** modifiées pour correspondre aux ambiances de chaque niveau  
 - Gestion de la **mort et réapparition** du joueur  
 - Ajout de **musique et sons d’action** selon l’ambiance et les événements (victoires, échecs…)  
-- Ajout d’un **HUD** et d’un **panneau d’instructions**
+- Ajout d’un **HUD**, d’un panneau **d’instructions**, d'un bouton **Pause** et d'un bouton **Continuer**
 
 ---
 
