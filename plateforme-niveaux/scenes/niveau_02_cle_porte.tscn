@@ -284,22 +284,22 @@ position = Vector2(124, 128)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(326, 448)
-message = "Bienvenue au Niveau #3 🤩 ! Ne te fie pas au saut, les blocs tournent et l'abîme, ça fait mal 🙂‍↔..."
+message = "Bienvenue au Niveau #3 ! Ne te fie pas au saut, les blocs tournent et l'abîme, ça fait mal..."
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-860, 576)
-message = "Prudence aux obstacles : Le Monstre et Les Scies ne sont pas gentils du tout 😬 ! "
+message = "Prudence aux obstacles : Le Monstre et Les Scies ne sont pas gentils du tout ! "
 
 [node name="PanneauMessage3" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
-message = "Génial, t'es à la moitié du niveau #3. Alerte aux vagues et aux scies dangereuses, vaz-y, ne lâche pas encore 🫠 !"
+message = "Génial, t'es à la moitié du niveau #3. Alerte aux vagues et aux scies dangereuses, vaz-y, ne lâche pas encore !"
 
 [node name="PanneauMessage4" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-1628, -448)
-message = "Bravo, t'es proche au but ! Il n'est te reste qu'à chercher la clé magique, reste vigilant aux abîmes et aux pièges 🫣 !"
+message = "Bravo, t'es proche au but ! Il n'est te reste qu'à chercher la clé magique, reste vigilant aux abîmes et aux pièges !"
 
 [node name="PanneauMessage5" parent="PanneauxMessagesGroupe" instance=ExtResource("39_wac75")]
 position = Vector2(-988, -896)
-message = "Tu pensais ça finissait déjà? Ben là, dernier petit défi contre les boules de feu dangereuses 😂 !"
+message = "Tu pensais ça finissait déjà? Ben là, dernier petit défi contre les boules de feu dangereuses !"
 
 [node name="Joueur" parent="." instance=ExtResource("8_oeuwp")]
 position = Vector2(607, 577)

@@ -56,11 +56,11 @@ tile_set = ExtResource("5_5ti7h")
 position = Vector2(512, 640)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" groups=["panneaux"] instance=ExtResource("6_x3gr2")]
-message = "Bienvenue au Niveau #1 😊 !"
+message = "Bienvenue au Niveau #1 !"
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" groups=["panneaux"] instance=ExtResource("6_x3gr2")]
 position = Vector2(640, 0)
-message = "Prend garde de l'Abîme 🥴 !"
+message = "Prend garde de l'Abîme !"
 
 [node name="FeuxCampsGroupe" type="Node2D" parent="."]
 

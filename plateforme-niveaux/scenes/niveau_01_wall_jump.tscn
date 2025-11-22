@@ -227,18 +227,18 @@ position = Vector2(1568, 1088)
 
 [node name="PanneauMessage" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(-1344, -256)
-message = "Bienvenue au Niveau #2 🫡 ! Attention aux Ennemis, aux Buissons, aux Cactus et aux Pièges 🥴 !"
+message = "Bienvenue au Niveau #2 ! Attention aux Ennemis, aux Buissons, aux Cactus et aux Pièges !"
 
 [node name="PanneauMessage2" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(-862, -768)
-message = "À ta place, j'essaierais de ne pas toucher les cactus, Bonne chance 😵  !"
+message = "À ta place, j'essaierais de ne pas toucher les cactus, Bonne chance !"
 
 [node name="PanneauMessage3" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
 position = Vector2(264, -768)
-message = "Pas si pire, hein 🙃 ? Lache pas !"
+message = "Pas si pire, hein ? Lache pas !"
 
 [node name="PanneauMessage4" parent="PanneauxMessagesGroupe" instance=ExtResource("19_upom3")]
-message = "Bravo, T'es proche au but 💪 !"
+message = "Bravo, T'es proche au but !"
 
 [node name="Joueur" parent="." instance=ExtResource("10_uqc8o")]
 position = Vector2(96, 834)
